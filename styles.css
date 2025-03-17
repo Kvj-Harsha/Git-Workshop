@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background-color: #ffffff;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 20px;
 }
@@ -17,12 +17,14 @@ body {
     margin-bottom: 20px;
 }
 
-/* Grid Container */
+/* Profile Container - Fix Grid Issue */
 .profile-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     max-width: 1200px;
+    width: 100%;
 }
 
 /* Profile Card */
@@ -32,6 +34,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 250px; /* Fixed width for consistency */
 }
 
 /* Profile Image */
@@ -64,14 +67,18 @@ body {
 }
 
 /* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .social-links a {
-    display: inline-block;
     text-decoration: none;
     color: white;
     background: #007bff;
     padding: 5px 10px;
     border-radius: 5px;
-    margin: 3px;
     font-size: 12px;
     transition: 0.3s;
 }
